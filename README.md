@@ -1,4 +1,4 @@
-# swagger-response-template
+# swagger-sample-template
 A starter swagger template for CRUD operations with success and error responses
 
 The schema of success and error responses is defined as per folowing spec:
