@@ -30,15 +30,17 @@ paths:
         200:
           description: Success
           schema:
-            type: object
-            required:
-              - _meta
-              - data
-            properties:
-              _meta:
-                $ref: '#/definitions/_Meta'
-              data:
-                $ref: '#/definitions/Items'
+            $ref: '#/definitions/Items'
+          headers:
+            X-Pagination-Count:
+              description: Total number of items
+              type: integer
+            X-Pagination-Page:
+              description: Current page number
+              type: integer
+            X-Pagination-Limit:
+              description: Number of returned items
+              type: integer
         400:
           $ref: '#/responses/400BadRequest'
         401:
@@ -87,12 +89,7 @@ paths:
         200:
           description: Success
           schema:
-            type: object
-            required:
-              - data
-            properties:
-              data:
-                $ref: '#/definitions/Item'
+            $ref: '#/definitions/Item'
         400:
           $ref: '#/responses/400BadRequest'
         401:
@@ -137,7 +134,7 @@ paths:
         - $ref: '#/parameters/id'
       responses:
         204:
-          description: Success
+         description: Success
         400:
           $ref: '#/responses/400BadRequest'
         401:
@@ -255,18 +252,6 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Item'
-  _Meta:
-    required:
-        - count
-        - page
-        - limit
-    properties:
-      count:
-        type: integer
-      page:
-        type: integer
-      limit:
-        type: integer
   Message:
     type: object
     properties:
