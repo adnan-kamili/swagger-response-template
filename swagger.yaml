@@ -1,4 +1,4 @@
-# as a demonstration of an API spec in YAML
+# a demonstration of an API spec with HTTP responses in YAML
 swagger: '2.0'
 info:
   title: Starter Template
