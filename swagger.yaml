@@ -137,7 +137,7 @@ paths:
         - $ref: '#/parameters/id'
       responses:
         204:
-          $ref: '#/responses/SuccessMessage'
+          description: Success
         400:
           $ref: '#/responses/400BadRequest'
         401:
