@@ -111,8 +111,8 @@ paths:
         - $ref: '#/parameters/id'
         - $ref: '#/parameters/item'
       responses:
-        201:
-          $ref: '#/responses/SuccessMessage'
+        204:
+          description: Success
         400:
           $ref: '#/responses/400BadRequest'
         401:
@@ -134,7 +134,7 @@ paths:
         - $ref: '#/parameters/id'
       responses:
         204:
-         description: Success
+          description: Success
         400:
           $ref: '#/responses/400BadRequest'
         401:
