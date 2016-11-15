@@ -71,6 +71,8 @@ paths:
           $ref: '#/responses/403Forbidden'
         404:
           $ref: '#/responses/404NotFound'
+        409:
+          $ref: '#/responses/409Conflict'
         429:
           $ref: '#/responses/429TooManyRequests'
         500:
@@ -121,6 +123,8 @@ paths:
           $ref: '#/responses/403Forbidden'
         404:
           $ref: '#/responses/404NotFound'
+        409:
+          $ref: '#/responses/409Conflict'
         429:
           $ref: '#/responses/429TooManyRequests'
         500:
@@ -143,6 +147,8 @@ paths:
           $ref: '#/responses/403Forbidden'
         404:
           $ref: '#/responses/404NotFound'
+        409:
+          $ref: '#/responses/409Conflict'
         429:
           $ref: '#/responses/429TooManyRequests'
         500:
@@ -219,6 +225,10 @@ responses:
       $ref: '#/definitions/Message'
   404NotFound:
     description: The URI requested is invalid or the resource requested does not exists. 
+    schema:
+      $ref: '#/definitions/Message'
+  409Conflict:
+    description: Any message which should help the user to resolve the conflict. 
     schema:
       $ref: '#/definitions/Message'
   429TooManyRequests:
