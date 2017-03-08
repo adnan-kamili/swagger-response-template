@@ -32,13 +32,13 @@ paths:
           schema:
             $ref: '#/definitions/Items'
           headers:
-            X-Pagination-Count:
+            Pagination-Count:
               description: Total number of items
               type: integer
-            X-Pagination-Page:
+            Pagination-Page:
               description: Current page number
               type: integer
-            X-Pagination-Limit:
+            Pagination-Limit:
               description: Number of returned items
               type: integer
         400:
